@@ -1,16 +1,13 @@
 ---
-layout: archive
-title: "教学"
-permalink: /teaching/
+layout: single
+title: "Blogs"
+permalink: /blogs/
 author_profile: true
+redirect_from:
+  - /teaching/
 ---
 
-{% include base_path %}
+This section collects learning notes and open research questions.
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
-
-{% if site.teaching.size == 0 %}
-  <p>暂无教学内容，后续更新。</p>
-{% endif %}
+- [Study Notes](/study-notes/): course notes, reading summaries, and implementation logs.
+- [Questions](/questions/): open problems and discussion prompts.

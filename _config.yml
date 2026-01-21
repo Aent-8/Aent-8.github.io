@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "马嘉庆"
 title_separator          : "-"
 name                     : &name "马嘉庆"
-description              : &description "南京师范大学电气与自动化工程学院本科生，个人主页。"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Undergraduate in Automation at Nanjing Normal University; research on multi-robot systems and 3D scene generation."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://aent-8.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,11 +26,11 @@ author:
   avatar           : "profile.png"
   name             : "马嘉庆"
   pronouns         : # example: "she/her"  
-  bio              : "本科生"
+  bio              : "Undergraduate in Automation, Nanjing Normal University"
   location         : "南京, 中国"
   employer         : "南京师范大学"
   uri              : 
-  email            :
+  email            : 21230902@njnu.edu.cn
 
   # Academic websites
   academia         : 

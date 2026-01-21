@@ -7,12 +7,36 @@ redirect_from:
   - /about.html
 ---
 
-你好，我是马嘉庆，南京师范大学电气与自动化工程学院本科生。这个主页用于展示我的学习与实践记录，包含项目、课程与相关成果（内容将持续更新）。
+Hello, I'm Jiaqing Ma (马嘉庆), an undergraduate in Automation at the School of Electrical and Automation Engineering, Nanjing Normal University. My research interests include multi-robot systems, active sensing, and 3D scene generation.
 
-目前重点方向（占位，可随时替换）：
+## Research Interests
+- Multi-robot exploration, search, and tracking
+- Active perception and sensor-based planning
+- 3D Gaussian Splatting and controllable scene editing
 
-- 电力系统与新能源接入
-- 自动化控制与智能感知
-- 数据分析与可视化呈现
+## Education
+- B.Eng. in Automation, Nanjing Normal University (School of Electrical and Automation Engineering)
+  - GPA: 4.33/5.0; rank: 1/102; comprehensive rank: 1/102
+  - Selected coursework: Engineering Mathematics B, Automatic Control Principles, Modern Control Theory, C Programming, Python and AI Fundamentals, Circuit Theory B
 
-如果你希望交流或合作，联系方式待补充（邮箱/微信）。
+## Selected Publications
+- [DreamVGGT: VGGT-Guided Generative Gaussian Splatting for Scene Customization](/publication/dreamvggt/)
+- [Distributed Multi-Robot Multi-Target Simultaneous Search and Tracking in an Unknown Non-convex Environment](/publication/ssat/)
+- [Distributed Multi-robot Area Examination and Search for Clustered Targets with Limited Field of Views](/publication/ras2024/)
+
+## Honors and Awards
+- National Scholarship (2025).
+- Outstanding Student Scholarship (First Class) x4; Merit Student x2; Excellent Student Cadre x2. [Certificate](/files/awards/award-scholarship-2024-2025-first.png)
+- RoboCup China Finals (National 1st Prize). [Certificate](/files/awards/award-robocup-2025.png)
+- National Undergraduate Embedded Chip and System Design Competition, FPGA track (National 2nd Prize, 2024/2025).
+- AI For Science Innovation Application Competition (National Silver, 2025). [Certificate](/files/awards/award-ai4science-silver.jpg)
+- National Undergraduate Electronic Design Contest, Jiangsu 1st Prize (2025). [Certificate](/files/awards/award-electronic-design-jiangsu-first.jpg)
+
+## Skills
+- Programming: Python, C
+- Tools: PyTorch, ROS, Linux, MATLAB, FPGA toolchain, Gazebo, MuJoCo
+- English: CET-4 646, CET-6 582
+
+## Contact
+- Email: 21230902@njnu.edu.cn
+- CV: [PDF](/files/cv/ma-jiaqing-cv.pdf)

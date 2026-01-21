@@ -1,18 +1,34 @@
 ---
-layout: archive
-title: "报告"
-permalink: /talks/
+layout: single
+title: "Projects"
+permalink: /projects/
 author_profile: true
+redirect_from:
+  - /talks/
 ---
 
-{% if site.talkmap_link == true %}
-<p style="text-decoration:underline;"><a href="/talkmap.html">查看报告地图</a></p>
-{% endif %}
+Selected research and engineering projects, with an emphasis on multi-robot systems and 3D scene understanding.
 
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
+## Research Projects
 
-{% if site.talks.size == 0 %}
-  <p>暂无报告内容，后续更新。</p>
-{% endif %}
+### Multi-UAV Mesh Networking and Localization System for Live-line Safety Operations
+*National Undergraduate Innovation Project, project lead.*
+
+- Built a multi-UAV mesh network and improved OLSR routing with ETX-based link quality to reduce dropouts.
+- Integrated RTK + UWB fusion and ESO dual-loop disturbance rejection for centimeter-level positioning and stable hovering.
+- Implemented ROS + AirSim simulation and hardware validation.
+
+### DreamVGGT: VGGT-Guided Generative 3D Gaussian Splatting
+- Single-image 3D scene customization with geometric-semantic alignment.
+- Related paper and demo: [DreamVGGT](/publication/dreamvggt/).
+
+### Distributed Multi-Robot Multi-Target Search and Tracking
+- Joint exploration, coverage, and tracking in unknown non-convex environments.
+- Related paper and demo: [SSAT](/publication/ssat/).
+
+## Competitions and Engineering Practice
+
+- RoboCup China Finals (National 1st Prize). [Certificate](/files/awards/award-robocup-2025.png)
+- National Undergraduate Embedded Chip and System Design Competition, FPGA track (National 2nd Prize, 2024/2025).
+- AI For Science Innovation Application Competition (National Silver, 2025). [Certificate](/files/awards/award-ai4science-silver.jpg)
+- National Undergraduate Electronic Design Contest, Jiangsu 1st Prize (2025). [Certificate](/files/awards/award-electronic-design-jiangsu-first.jpg)

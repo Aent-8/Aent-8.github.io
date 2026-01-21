@@ -1,12 +1,14 @@
 ---
 layout: archive
-title: "成果"
-permalink: /publications/
+title: "Academic"
+permalink: /academic/
 author_profile: true
+redirect_from:
+  - /publications/
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">更多成果可见 <a href="{{site.author.googlescholar}}">Google Scholar</a>。</div>
+  <div class="wordwrap">More publications on <a href="{{site.author.googlescholar}}">Google Scholar</a>.</div>
 {% endif %}
 
 {% include base_path %}
@@ -33,7 +35,7 @@ author_profile: true
 {% endif %}
 
 {% if site.publications.size == 0 %}
-  <p>暂无成果内容，后续更新。</p>
+  <p>No academic items yet. Updates coming soon.</p>
 {% endif %}
 
 
