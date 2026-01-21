@@ -1,0 +1,18 @@
+---
+layout: archive
+title: "报告"
+permalink: /talks/
+author_profile: true
+---
+
+{% if site.talkmap_link == true %}
+<p style="text-decoration:underline;"><a href="/talkmap.html">查看报告地图</a></p>
+{% endif %}
+
+{% for post in site.talks reversed %}
+  {% include archive-single-talk.html %}
+{% endfor %}
+
+{% if site.talks.size == 0 %}
+  <p>暂无报告内容，后续更新。</p>
+{% endif %}

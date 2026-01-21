@@ -1,0 +1,27 @@
+{
+  "basics": {
+    "name": "马嘉庆",
+    "label": "本科生",
+    "email": "",
+    "website": "https://aent-8.github.io",
+    "summary": "南京师范大学电气与自动化工程学院本科生。",
+    "location": {
+      "city": "南京",
+      "countryCode": "CN"
+    }
+  },
+  "education": [
+    {
+      "institution": "南京师范大学",
+      "area": "电气与自动化工程学院",
+      "studyType": "本科",
+      "startDate": "",
+      "endDate": ""
+    }
+  ],
+  "work": [],
+  "projects": [],
+  "publications": [],
+  "skills": [],
+  "awards": []
+}

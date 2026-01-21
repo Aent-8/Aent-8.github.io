@@ -1,62 +1,96 @@
-# GitHub个人主页README模板集
+# Academic Pages
+**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dahezhiquan/Github-personal-homepage/blob/main/LICENSE)
+![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
 
-> 一个收集了精心设计和整理的GitHub个人主页README模板的项目，让你的个人主页更加独特和专业！
+# Getting Started
 
-![image](https://github.com/dahezhiquan/Github-personal-homepage/assets/76278560/93701e5b-4263-4aec-ad44-b3712fb50688)
+1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
+1. Click the "Use this template" button in the top right.
+1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
+1. Set site-wide configuration and add your content.
+1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
+1. Check status by going to the repository settings, in the "GitHub pages" section
+1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
 
+See more info at https://academicpages.github.io/
 
-## 介绍
+## Running locally
 
-欢迎来到GitHub个人主页README模板集项目！这个项目的目标是提供多种精美而专业的README模板，以增强GitHub用户的个人主页。无论你是开发者、设计师还是其他领域的专业人士，这些模板都将帮助你在GitHub上创建令人印象深刻的个人主页。
+When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
 
-## 特点
+1. Clone the repository and made updates as detailed above.
 
-- 🌈 美观而引人注目的设计
-- 🎨 易于定制和个性化
-- 📄 清晰结构的部分，展示你的技能、项目等
-- 🚀 快速和轻量的模板
-- 📦 预制的示例和代码片段
+### Using a different IDE
+1. Make sure you have ruby-dev, bundler, and nodejs installed
+    
+    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
+    ```bash
+    sudo apt install ruby-dev ruby-bundler nodejs
+    ```
+    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
+    ```bash
+    sudo apt update && sudo apt upgrade -y
+    ```
+    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
 
-## 快速开始
+    On MacOS the commands are:
+    ```bash
+    brew install ruby
+    brew install node
+    gem install bundler
+    ```
+1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
 
-要使用这些模板，请按照以下步骤操作：
+    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
+    Install Gems Locally (Recommended):
+    ```bash
+    bundle config set --local path 'vendor/bundle'
+    ```
+    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
 
-1. 克隆这个仓库：`git clone https://github.com/dahezhiquan/Github-personal-homepage.git`
-2. 进入你喜欢的风格的目录。
-3. 选择你喜欢的模板，并复制其内容。
-4. 在你的GitHub个人主页仓库中创建一个名为`README.md`的新文件。
-5. 将复制的模板内容粘贴到`README.md`文件中。
-6. 使用你自己的信息、项目和链接来自定义模板。
-7. 提交并推送修改到你的GitHub个人主页仓库。
-8. 完成！你的个人主页README已经准备好了。
+1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
 
-## 模板预览
+If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
 
-这是该项目中提供的模板之一的预览：
+## Using Docker
 
-![微信截图_20230704161850](https://github.com/dahezhiquan/Github-personal-homepage/assets/76278560/9c872155-5719-4cfa-a161-eccd1b64d5ab)
+Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
 
+You can build and execute the container by running the following command in the repository:
 
-## 贡献
+```bash
+chmod -R 777 .
+docker compose up
+```
 
-欢迎贡献！如果你创建了新的模板或对现有模板有任何改进，请随时提交拉取请求。
+You should now be able to access the website from `localhost:4000`.
 
-## 许可证
+### Using the DevContainer in VS Code
 
-本项目基于MIT许可证。详细信息请参阅[LICENSE](LICENSE)文件。
+If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development coontainer configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+
+# Maintenance
+
+Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+
+This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+
+## Bugfixes and enhancements
+
+If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+
+Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
 
 ---
+<div align="center">
+    
+![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
+[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
+[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
-觉得这些模板有用吗？[给我买杯咖啡 ☕](#)
-
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/76278560/250815119-ce58e515-eff6-4358-ba89-4b96d18882c7.jpg" alt="微信收款码" width="200" height="260">
-</p>
-
-在CSDN上与我联系：[世界尽头与你](https://blog.csdn.net/Gherbirthday0916?spm=1000.2115.3001.5343)
-
-
-111
+[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
+[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
+</div>
