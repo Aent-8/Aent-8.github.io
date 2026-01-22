@@ -6,15 +6,43 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg persist">
+            <a href="{{ base_path }}/"
+               class="lang-switchable"
+               data-i18n-en="{{ site.title_en | default: site.title }}"
+               data-i18n-zh="{{ site.title }}">{{ site.title }}</a>
+          </li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item">
+              <a href="{{ domain }}{{ link.url }}"
+                 class="lang-switchable"
+                 data-i18n-en="{{ link.title }}"
+                 data-i18n-zh="{{ link.title_zh | default: link.title }}">{{ link.title }}</a>
+            </li>
+            {% if link.children != null %}
+              {% for child in link.children %}
+                {% if child.url contains 'http' %}
+                  {% assign domain = '' %}
+                {% else %}
+                  {% assign domain = base_path %}
+                {% endif %}
+                <li class="masthead__menu-item">
+                  <a href="{{ domain }}{{ child.url }}"
+                     class="lang-switchable"
+                     data-i18n-en="{{ child.title }}"
+                     data-i18n-zh="{{ child.title_zh | default: child.title }}">{{ child.title }}</a>
+                </li>
+              {% endfor %}
+            {% endif %}
           {% endfor %}
+          <li id="lang-toggle" class="masthead__menu-item persist">
+            <a role="button" aria-label="toggle language" data-lang-toggle><span id="lang-toggle-label">EN / 中文</span></a>
+          </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>

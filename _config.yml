@@ -10,6 +10,7 @@
 locale                   : "zh-CN"
 site_theme               : "default" # Currently available options are "default", "air"
 title                    : "马嘉庆"
+title_en                 : "Jiaqing Ma"
 title_separator          : "-"
 name                     : &name "马嘉庆"
 description              : &description "Undergraduate in Automation at Nanjing Normal University; research on multi-robot systems and 3D scene generation."   # Update this with a general description of your site, this is the default if not overridden by a page

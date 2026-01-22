@@ -9,17 +9,22 @@
 
 main:
   - title: "Academic"
+    title_zh: "学术"
     url: /academic/
 
   - title: "Projects"
+    title_zh: "项目"
     url: /projects/
 
   - title: "Blogs"
+    title_zh: "博客"
     url: /blogs/
     children:
       - title: "Study Notes"
+        title_zh: "学习笔记"
         url: /study-notes/
       - title: "Questions"
+        title_zh: "问题"
         url: /questions/
     
   # - title: "Portfolio"
