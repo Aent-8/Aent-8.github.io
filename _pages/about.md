@@ -7,12 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-Hello, I'm Jiaqing Ma (马嘉庆), an undergraduate in Automation at the School of Electrical and Automation Engineering, Nanjing Normal University. My research interests include multi-robot systems, active sensing, and 3D scene generation.
+Hello, I'm Jiaqing Ma (马嘉庆), an undergraduate in Automation at the School of Electrical and Automation Engineering, Nanjing Normal University. My research focuses on multi-robot systems and embodied intelligence.
 
 ## Research Interests
-- Multi-robot exploration, search, and tracking
-- Active perception and sensor-based planning
-- 3D Gaussian Splatting and controllable scene editing
+- Multi-robot systems & embodied intelligence; distributed coordination and decision making
+- Vision-Language-Action (VLA) policies and World Model-based autonomy
+- 3D vision for robotics (3DGS/NeRF), scene understanding, and sim-to-real perception
+- Active sensing, interactive perception, and planning under uncertainty
 
 ## Education
 - B.Eng. in Automation, Nanjing Normal University (School of Electrical and Automation Engineering)

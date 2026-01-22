@@ -4,16 +4,18 @@ collection: publications
 category: conferences
 permalink: /publication/dreamvggt/
 excerpt: "VGGT-guided 3D Gaussian Splatting for single-image scene generation and controllable object editing."
-date: 2025-01-01
+date: 2026-01-01
 venue: "IEEE International Conference on Multimedia & Expo (ICME) (submitted)"
-citation: "Ma, J. DreamVGGT: VGGT-Guided Generative Gaussian Splatting for Scene Customization. ICME (submitted)."
+meta_label: "Submitted in"
+share: false
+citation: "Ma, J., Liu, S., & Yang, T. (2026). DreamVGGT: VGGT-Guided Generative Gaussian Splatting for Scene Customization. Submitted to IEEE International Conference on Multimedia & Expo (ICME)."
 ---
 
-**Author:** Jiaqing Ma
+**Authors:** Jiaqing Ma, Sixun Liu, Tianyu Yang
 
 **Status:** Submitted.
 
-**Abstract:** We propose DreamVGGT, a unified framework that integrates diffusion-based generation with explicit VGGT geometric guidance to produce high-fidelity 3D Gaussian Splatting from a single image. An uncertainty-aware depth-semantic-point optimization aligns geometry and semantics for controllable object insertion, removal, and deformation.
+**Abstract:** VGGT has demonstrated powerful performance in multi-view synthesis. However, existing diffusion-based 3D generation frameworks underutilize the explicit geometric structure provided by VGGT, leaving the generated 3D models without effective grounding. To address these challenges, we propose DreamVGGT, a unified framework that synergizes diffusion-based generation with explicit geometric–semantic guidance to achieve high-fidelity 3D model synthesis and editing from a single image. Specifically, we employ VGGT-guided initialization to ground the Score Distillation Sampling (SDS) process, followed by our proposed Uncertainty-aware Depth-Semantic-Point Optimization (U-DSPO) to strictly align Gaussians via adaptive uncertainty and boundary synergy. This yields a semantically explicit 3DGS representation that enables controllable object editing, including insertion, removal, and deformation. Experiments confirm effective object editing, enabling customizable simulation and training environments.
 
 **Resources:** Manuscript available upon request | [Video](/files/videos/dreamvggt-demo.mp4)
 

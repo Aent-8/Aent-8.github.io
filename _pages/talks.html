@@ -5,6 +5,7 @@ permalink: /projects/
 author_profile: true
 redirect_from:
   - /talks/
+share: false
 ---
 
 Selected research and engineering projects, with an emphasis on multi-robot systems and 3D scene understanding.
@@ -25,6 +26,23 @@ Selected research and engineering projects, with an emphasis on multi-robot syst
 ### Distributed Multi-Robot Multi-Target Search and Tracking
 - Joint exploration, coverage, and tracking in unknown non-convex environments.
 - Related paper and demo: [SSAT](/publication/ssat/).
+
+### FPGA-Based Football Match Analysis System (ZYNQ-7020)
+- Built a heterogeneous FPGA+ARM pipeline for real-time football analytics (Jiangsu “苏超” league scenario).
+- YOLOv8 pruning/quantization for lightweight detection; PyQt5 UI for visualization and replay.
+- ~10 fps, <100 ms latency; supports player/ball tracking, event detection, and radar-view tactics.
+- Report: [PDF](/files/projects/project-report-1107.pdf)
+
+### FPGA-Based Elderly Fall Detection (ZYNQ-7020 + YOLOv7)
+- Embedded fall-detection system on ZYNQ-7020 with YOLOv7 pruning/quantization.
+- Hardware–software co-design: convolution acceleration on PL, control and classification on PS.
+- Targets low-latency, low-power monitoring for home and clinical scenarios.
+- Report: [PDF](/files/projects/fpga-report-11-11.pdf)
+
+### ALOHA Policy Reproduction (In Progress)
+- Reproducing the ALOHA bimanual manipulation policy: data pipeline, training stack, and benchmarking tasks.
+- Focus on teleoperation data collection, imitation learning, and sim-to-real evaluation.
+- Integrating perception (RGB-D/3D) and control interfaces for hardware experiments.
 
 ## Competitions and Engineering Practice
 
