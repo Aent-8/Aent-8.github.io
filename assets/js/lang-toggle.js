@@ -19,6 +19,7 @@
       labelEl.textContent = lang === 'zh' ? '中文 / EN' : 'EN / 中文';
     }
 
+    // Optional: lightweight client-side swapping for elements that provide both strings.
     const nodes = document.querySelectorAll('.lang-switchable');
     nodes.forEach((el) => {
       const text = lang === 'zh' ? el.dataset.i18nZh : el.dataset.i18nEn;
@@ -32,9 +33,34 @@
     updateDom(next);
   }
 
+  function getAlternateUrl(targetLang) {
+    const path = window.location.pathname || '/';
+    const hasEnPrefix = path === '/en' || path.startsWith('/en/');
+
+    // Current site strategy:
+    // - Chinese: normal routes e.g. /, /publications/
+    // - English: prefixed routes e.g. /en/, /en/publications/
+    if (targetLang === 'en') {
+      if (hasEnPrefix) return path;
+      return path === '/' ? '/en/' : `/en${path}`;
+    }
+
+    // target zh
+    if (!hasEnPrefix) return path;
+    const stripped = path.replace(/^\/en\/?/, '/');
+    return stripped === '' ? '/' : stripped;
+  }
+
   function toggleLang() {
     const current = getSaved();
-    setLang(current === 'zh' ? 'en' : 'zh');
+    const next = current === 'zh' ? 'en' : 'zh';
+    setLang(next);
+
+    // Navigate to the corresponding language page so the whole content changes.
+    const targetUrl = getAlternateUrl(next);
+    if (targetUrl && targetUrl !== window.location.pathname) {
+      window.location.assign(targetUrl + window.location.search + window.location.hash);
+    }
   }
 
   document.addEventListener('DOMContentLoaded', () => {

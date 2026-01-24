@@ -12,18 +12,31 @@
                data-i18n-en="{{ site.title_en | default: site.title }}"
                data-i18n-zh="{{ site.title }}">{{ site.title }}</a>
           </li>
+
+          {% assign is_en_page = false %}
+          {% if page.lang == 'en' or page.url == '/en/' or page.url contains '/en/' %}
+            {% assign is_en_page = true %}
+          {% endif %}
+
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
+
+            {% assign link_href = link.url %}
+            {% if is_en_page and link.url_en %}
+              {% assign link_href = link.url_en %}
+            {% endif %}
+
             <li class="masthead__menu-item">
-              <a href="{{ domain }}{{ link.url }}"
+              <a href="{{ domain }}{{ link_href }}"
                  class="lang-switchable"
                  data-i18n-en="{{ link.title }}"
                  data-i18n-zh="{{ link.title_zh | default: link.title }}">{{ link.title }}</a>
             </li>
+
             {% if link.children != null %}
               {% for child in link.children %}
                 {% if child.url contains 'http' %}
@@ -31,8 +44,14 @@
                 {% else %}
                   {% assign domain = base_path %}
                 {% endif %}
+
+                {% assign child_href = child.url %}
+                {% if is_en_page and child.url_en %}
+                  {% assign child_href = child.url_en %}
+                {% endif %}
+
                 <li class="masthead__menu-item">
-                  <a href="{{ domain }}{{ child.url }}"
+                  <a href="{{ domain }}{{ child_href }}"
                      class="lang-switchable"
                      data-i18n-en="{{ child.title }}"
                      data-i18n-zh="{{ child.title_zh | default: child.title }}">{{ child.title }}</a>
@@ -40,6 +59,7 @@
               {% endfor %}
             {% endif %}
           {% endfor %}
+
           <li id="lang-toggle" class="masthead__menu-item persist">
             <a role="button" aria-label="toggle language" data-lang-toggle><span id="lang-toggle-label">EN / 中文</span></a>
           </li>

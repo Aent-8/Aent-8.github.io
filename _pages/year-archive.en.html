@@ -1,0 +1,13 @@
+---
+layout: archive
+title: "Blog Posts"
+permalink: /en/year-archive/
+author_profile: true
+lang: en
+---
+
+{% include base_path %}
+
+{% for post in site.posts reversed %}
+  {% include archive-single.html %}
+{% endfor %}
